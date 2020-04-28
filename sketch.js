@@ -16,11 +16,12 @@ function setup() {
   // Create a population with a target phrase, mutation rate, and population max
   population = new Population(mutationRate, popmax);
   // A simple button class
-  button = createButton("evolve new generation");
+  button = createButton("Evolve");
   button.mousePressed(nextGen);
-  button.position(730, 340);
+  button.position(760, 440);
   info = createDiv('');
-  info.position(730, 375);
+  info.position(735, 475);
+
 }
 
 function draw() {
@@ -28,7 +29,7 @@ function draw() {
   // Display the faces
   population.display();
   population.rollover(mouseX, mouseY);
-  info.html("Generation #:" + population.getGenerations());
+  info.html("The  " + population.getGenerations()+ "  generation");
 }
 
 // If the button is clicked, evolve next generation
